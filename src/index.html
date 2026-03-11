@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="static/icon192.png">
+  <link rel="icon" type="image/png" href="static/icon64.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+  <title>skies-adsb</title>
+</head>
+
+<body>
+  <canvas id="webgl" class="webgl"></canvas>
+
+  <div id="hud-left" class="action-container" style="display: none;">
+    <button id="home" class="icon">
+      <span class="material-icons-outlined md-light md-36">home</span>
+    </button>
+    <button id="360" class="icon">
+      <span class="material-icons-outlined md-light md-36">360</span>
+    </button>
+    <button id="settings" class="icon">
+      <span class="material-icons-outlined md-light md-36">settings</span>
+    </button>
+    <button id="full-screen" class="icon">
+      <span class="material-icons-outlined md-light md-36">fullscreen</span>
+    </button>
+  </div>
+
+  <div id="hud-right" class="action-container" style="display: none;">
+    <button id="camera" class="icon">
+      <span class="material-icons-outlined md-light md-36">visibility</span>
+    </button>
+    <button id="info" class="icon">
+      <span class="material-icons-outlined md-light md-36">info</span>
+    </button>
+    <button id="close" class="icon">
+      <span class="material-icons-outlined md-light md-36">close</span>
+    </button>
+  </div>
+
+  <div id="hud-dialog-container" style="display: none;">
+    <div id="hud-dialog" class="media">
+      <div class="image">
+        <img id="photo">
+      </div>
+      <div class="content">
+        <div>
+          <a id="callsign" target="_blank"></a>
+        </div>
+        <div id="section_flightAware">
+          <div>
+            <a id="aircraftType" target="_blank"></a>
+          </div>
+          <div>
+            <a id="airline" target="_blank"></a>
+          </div>
+          <div>
+            <a id="origin_long" target="_blank"></a>
+          </div>
+          <div>
+            <a id="destination_long" target="_blank"></a>
+          </div>
+        </div>
+        <div id="section_planespotters">
+          <div>
+            <a id="aircraftRegistration" target="_blank"></a>
+          </div>
+          <div>
+            <a id="photographer" target="_blank"></a>
+          </div>
+        </div>
+        <div id="section_telemetry" class="telemetry">
+          <div id="telemetry_heading"></div>|
+          <div id="telemetry_ground_speed"></div>|
+          <div id="telemetry_altitude"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script type="module" src="main.js"></script>
+
+</html>

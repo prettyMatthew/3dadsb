@@ -1,0 +1,25 @@
+{
+  "name": "skies-adsb",
+  "version": "2.4.3",
+  "description": "skies-adsb is a real-time 3D browser based web app for tracking aircraft using ADS-B data obtained from a RTL-SDR receiver.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --emptyOutDir --base=/skies-adsb/",
+    "dev-flask": "source .venv/bin/activate && cd flask && export FLASK_ENV=development && flask run -h 0.0.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT License",
+  "devDependencies": {
+    "vite": "^5.4.14"
+  },
+  "dependencies": {
+    "@mapbox/sphericalmercator": "^2.0.1",
+    "dat.gui": "^0.7.9",
+    "stats.js": "^0.17.0",
+    "three": "^0.133.1",
+    "troika-three-text": "^0.52.3"
+  }
+}
